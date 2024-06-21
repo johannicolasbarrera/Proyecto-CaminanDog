@@ -10,9 +10,8 @@ app.use( cors() );
 
 //RUTAS QUE SE VAN CREAR
 
-
-
-
+app.use ('/api/pets', require ('./routes/pets.routes'))
+app.use ( '/api/reservas', require ( './routes/reservas.routes'))
 
 
 dbConection();
