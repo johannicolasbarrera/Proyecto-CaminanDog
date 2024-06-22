@@ -5,7 +5,7 @@ const ReservaSchema = new Schema({
         type: String,
         require: true
     },
-    hora: {
+    hour: {
         type: String,
         require: true
     },
