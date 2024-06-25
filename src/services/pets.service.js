@@ -18,7 +18,7 @@ const removeOnePetById = async ( id ) => {
 
 const updateOnePetById = async ( _id, updatedpets ) => {
     return await PetsModel.findOneAndUpdate(
-        { _id: id },
+        { _id },
         updatedpets,
         { new: true }
     );
