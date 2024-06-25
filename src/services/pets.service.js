@@ -16,10 +16,10 @@ const removeOnePetById = async ( id ) => {
     return await PetsModel.findOneAndDelete({_id: id});
 }
 
-const updateOnePetById = async ( _id, updatedpets ) => {
+const updateOnePetById = async ( _id, updatedPets ) => {
     return await PetsModel.findOneAndUpdate(
         { _id },
-        updatedpets,
+        updatedPets,
         { new: true }
     );
 }
