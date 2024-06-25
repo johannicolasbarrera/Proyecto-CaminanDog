@@ -1,4 +1,21 @@
-const { getServiceById, createService, updateServiceById, removeServiceById } = require( '../services/services.service')
+const { getServiceById, createService, updateServiceById, removeServiceById, getService } = require( '../services/services.service')
+const getAllServices = async ( req, res ) => { 
+    const data = await getService ();
+    try {
+        res.json({
+            ok: true, 
+            data
+        })
+    } catch (error) {
+        console.error ( error ); 
+
+        res.json({
+            ok: false,
+            msg: 'No se pudieron obtener los servicios'
+        })
+        
+    }
+}
 
 const getServicesById = async ( req, res ) => {
     const id = req.params.id;
@@ -87,6 +104,7 @@ const removeOneService = async ( req, res ) => {
 }
 
 module.exports = { 
+    getAllServices,
     getServicesById, 
     createOneService,
     updateOneService,

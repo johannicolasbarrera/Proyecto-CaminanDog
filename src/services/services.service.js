@@ -1,5 +1,9 @@
 const ServiceModel = require( '../models/services'); 
 
+const getService = async ( ) => {
+    return await ServiceModel.find( )
+}
+
 const getServiceById = async ( _id ) => { 
     return await ServiceModel.findOne ({ _id })
 }
@@ -25,5 +29,6 @@ module.exports = {
     getServiceById, 
     createService,
     updateServiceById,
-    removeServiceById
+    removeServiceById,
+    getService
 }
