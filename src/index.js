@@ -17,6 +17,6 @@ app.use( '/api/services', require( './routes/services.routes' ));
 
 dbConection();
 
-app.listen( PORT, function() {
+app.listen( PORT || 3000, function() {
     console.log( `servidor corriendo en http://localhost:${PORT}` );
 })

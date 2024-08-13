@@ -1,8 +1,10 @@
 const mongoose = require( 'mongoose' );
+require('dotenv').config({path:'.env'})
 
 async function dbConection() {
     try {
-        await mongoose.connect( process.env.DB_URL, {} );
+        let mongoURL = process.env.DB_URL
+        await mongoose.connect(mongoURL , {} );
         console.log( 'base de datos inicializanda exitosamente' );
     }
 
