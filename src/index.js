@@ -10,13 +10,13 @@ app.use( cors() );
 
 //RUTAS QUE SE VAN CREAR
 
-app.use ('/api/pets', require ('./routes/pets.routes'));
-app.use ( '/api/reservas', require ( './routes/reservas.routes'));
-app.use( '/api/services', require( './routes/services.routes' ));
+app.use ('/api', require ('./routes/pets.routes'));
+app.use ( '/api', require ( './routes/reservas.routes'));
+app.use( '/api', require( './routes/services.routes' ));
 
 
 dbConection();
 
-app.listen( PORT, function() {
+app.listen( PORT || 3000, function() {
     console.log( `servidor corriendo en http://localhost:${PORT}` );
 })
