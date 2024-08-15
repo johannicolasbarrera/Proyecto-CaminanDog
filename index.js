@@ -1,8 +1,3 @@
-const express = require( 'express' );
-const app = express();
-const cors = require( 'cors' );
-const { dbConection } = require('./config/mongo.config');
-
 const express = require('express');
 const dbConection = require( './config/mongo.config' );
 const cors = require('cors');
